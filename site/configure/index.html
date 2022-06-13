@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Configure - Skarf Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Configure";
+        var mkdocs_page_input_path = "configure.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Skarf Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Configure</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-yaml-configyml">Example YAML (config.yml)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-json-configjson">Example JSON (config.json)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-everything-means">What everything means</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Skarf Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Configure</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="configuring-skarf">Configuring Skarf</h1>
+<p>You can configure skarf with YAML and JSON. To configure skarf (in docker) you'll need to mount <code>/app/config</code> to a local directory, and then you can put a <code>config.json</code> or <code>config.yml</code> into that folder. You can see examples of configs on this page, and further down there is a section which tells you what everything means.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="example-yaml-configyml">Example YAML (<code>config.yml</code>)</h3>
+<pre><code class="language-yaml">version: 2 
+settings:
+  name: 'Person' 
+  subtitle: 'Some for info' 
+  font: Roboto, Arial 
+  color: '#6F6F6F' 
+  link-color: '#F6F6F6' 
+  glass-card: true 
+  background:
+    type: color
+    content: '#2F2F2F' 
+  favicon: /static/favicon.png 
+  description: Some info in the meta description tag 
+  image:
+    type: font-awesome 
+    style: solid 
+    content: user
+  links:
+    - name: Google 
+      link: https://google.com 
+      image: 
+        type: font-awesome
+        style: brands
+        content: google
+      color: '#454FBF'
+    - name: Skarf Github
+      link: https://github.com/woooferz/skarf
+      image:
+        type: font-awesome
+        style: brands
+        content: github
+      color: '#3F3F3F'
+</code></pre>
+<h3 id="example-json-configjson">Example JSON (<code>config.json</code>)</h3>
+<pre><code class="language-json">{
+  &quot;version&quot;: 2,
+  &quot;settings&quot;: {
+    &quot;name&quot;: &quot;Person&quot;,
+    &quot;subtitle&quot;: &quot;Some for info&quot;,
+    &quot;font&quot;: &quot;Roboto, Arial&quot;,
+    &quot;color&quot;: &quot;#6F6F6F&quot;,
+    &quot;link-color&quot;: &quot;#F6F6F6&quot;,
+    &quot;glass-card&quot;: true,
+    &quot;background&quot;: {
+      &quot;type&quot;: &quot;color&quot;,
+      &quot;content&quot;: &quot;#2F2F2F&quot;
+    },
+    &quot;favicon&quot;: &quot;/static/favicon.png&quot;,
+    &quot;description&quot;: &quot;Some info in the meta description tag&quot;,
+    &quot;image&quot;: {
+      &quot;type&quot;: &quot;font-awesome&quot;,
+      &quot;style&quot;: &quot;solid&quot;,
+      &quot;content&quot;: &quot;user&quot;
+    },
+    &quot;links&quot;: [
+      {
+        &quot;name&quot;: &quot;Google&quot;,
+        &quot;link&quot;: &quot;https://google.com&quot;,
+        &quot;image&quot;: {
+          &quot;type&quot;: &quot;font-awesome&quot;,
+          &quot;style&quot;: &quot;brands&quot;,
+          &quot;content&quot;: &quot;google&quot;
+        },
+        &quot;color&quot;: &quot;#454FBF&quot;
+      },
+      {
+        &quot;name&quot;: &quot;Skarf Github&quot;,
+        &quot;link&quot;: &quot;https://github.com/woooferz/skarf&quot;,
+        &quot;image&quot;: {
+          &quot;type&quot;: &quot;font-awesome&quot;,
+          &quot;style&quot;: &quot;brands&quot;,
+          &quot;content&quot;: &quot;github&quot;
+        },
+        &quot;color&quot;: &quot;#3F3F3F&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<h2 id="what-everything-means">What everything means</h2>
+<p><code>version</code> Version of skarf to load config with.</p>
+<p><code>settings.name</code> The title of the card, usually your name/nickname.</p>
+<p><code>settings.subtitle</code> Text beneath <code>settings.name</code> with a smaller font size.</p>
+<p><code>settings.font</code> Font of the card, needs to be installed on the viewers device.</p>
+<p><code>settings.color</code> Text colour of <code>settings.name</code> and <code>settings.subtitle</code>.</p>
+<p><code>settings.link-color</code> Text colour of all the links.</p>
+<p><code>settings.glass-card</code> If the card should have a glass effect. (From <a href="https://css.glass">css.glass</a>)</p>
+<p><code>settings.background.type</code> Either color or image. Decides the type of background your card will have.</p>
+<p><code>settings.background.content</code> If <code>settings.background.type</code> is color then use a hex color code, if it is image then use a image url.</p>
+<p><code>settings.favicon</code> Path to a favicon.</p>
+<p><code>settings.description</code> Meta description for your card.</p>
+<p><code>settings.image.type</code> Either font-awesome or image. Decides the type of avatar you will have.</p>
+<p><code>settings.image.style</code> Only useful if you are using font-awesome for <code>settings.image.type</code>, it will decide what style of icon you will have. It can be solid or brand, assuming you have the free tier of font awesome</p>
+<p><code>settings.image.content</code> If <code>settings.image.type</code> is font-awesome it is an icon name. If it is <code>image</code> then an image url.</p>
+<p><code>settings.links</code> An array/list of links.</p>
+<p><code>settings.links.name</code> The display text of a link.</p>
+<p><code>settings.links.link</code> The link of a link.</p>
+<p><code>settings.links.image</code> Same as <code>settings.image</code>.</p>
+<p><code>settings.color</code> The background colour of a link.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../installation/" class="btn btn-neutral float-left" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../installation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
