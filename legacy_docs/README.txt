@@ -1,1 +1,1 @@
-Docs for Skarf https://github.com/woooferz
+Docs for Skarf https://github.com/woooferz/skarf
