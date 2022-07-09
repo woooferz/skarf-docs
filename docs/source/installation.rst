@@ -1,3 +1,10 @@
+.. toctree::
+   :maxdepth: 2
+
+   index
+   installation
+   configure
+
 # Installation
 
 It is relativly easy to setup skarf with docker.
