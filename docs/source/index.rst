@@ -1,6 +1,7 @@
 .. toctree::
+   :hidden:
    :maxdepth: 2
-
+   index
    installation
    configure
 
