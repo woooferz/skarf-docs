@@ -128,4 +128,4 @@ settings:
 
 `settings.links.image` Same as `settings.image`.
 
-`settings.color` The background colour of a link.
+`settings.links.color` The background colour of a link.
