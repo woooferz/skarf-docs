@@ -168,10 +168,10 @@ size.
 ``settings.font`` Font of the card, needs to be installed on the viewers
 device.
 
-``settings.color`` Text colour of ``settings.name`` and
+``settings.color`` Text color of ``settings.name`` and
 ``settings.subtitle``.
 
-``settings.link-color`` Text colour of all the links.
+``settings.link-color`` Text color of all the links.
 
 ``settings.glass-card`` If the card should have a glass effect. (From
 `css.glass`_)
@@ -199,8 +199,7 @@ then use a hex color code, if it is image then use a image url. If it is gradien
 ``settings.image.type`` Either font-awesome or image. Decides the type
 of avatar you will have.
 
-``settings.image.style`` Only useful if you are using font-awesome for
-``settings.image.type``, it will decide what style of icon you will
+``settings.image.style`` Only useful if you are using font-awesome, it will decide what style of icon you will
 have. It can be solid or brand, assuming you have the free tier of font
 awesome
 
@@ -215,7 +214,10 @@ is an icon name. If it is ``image`` then an image url.
 
 ``settings.links.image`` Same as ``settings.image``.
 
-``settings.links.color`` The background colour of a link.
+``settings.links.color`` The background color of a link.
+
+``settings.links.text-color`` Overides ``settings.link-color``, it sets the color of the link
+
 
 ``settings.mini-links`` Like ``settings.links`` but it only has a icon and appears in one line, it is an array/list
 
