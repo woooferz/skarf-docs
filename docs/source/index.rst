@@ -1,4 +1,4 @@
-Skarf Docs
+Skarf Docs (V0.2)
 ==========
 
 Welcome to the skarf docs which teaches you how to install and configure
