@@ -11,12 +11,14 @@ section which tells you what everything means.
 ### Example YAML (`config.yml`)
 
 ``` yaml
-version: 3 # pls no touch this
+version: 4 # pls no touch this
 debug: false
 settings:
   name: "Person" # Main name
   subtitle: "Some for info" # A little text below namwe
   font: Roboto, Arial # The font-family to use for the page
+  verified: false # adds a cool checkmark
+  check-color: '#55FF11' # decides the color of checkmark
   color: "#6F6F6F" # The color of the name and subtitle
   link-color: "#F6F6F6" # The color of the text on the links
   glass-card: true # If the image, name, subtitle and links should be displayed on a glass-like card
@@ -71,12 +73,14 @@ settings:
 
 ``` json
 {
-  "version": 3,
+  "version": 4,
   "debug": false,
   "settings": {
     "name": "Person",
     "subtitle": "Some for info",
     "font": "Roboto, Arial",
+    "verified": false,
+    "check-color": "#55FF11",
     "color": "#6F6F6F",
     "link-color": "#F6F6F6",
     "glass-card": true,
@@ -161,6 +165,10 @@ size.
 
 `settings.font` Font of the card, needs to be installed on the viewers
 device.
+
+`settings.verified` Verification status, if set to true it adds a cool little checkmark
+
+`settings.check-color` Decides the color of the checkmark if `settings.verified` is set to true, if not set it will be the color of `settings.color`
 
 `settings.color` Text color of `settings.name` and `settings.subtitle`.
 
