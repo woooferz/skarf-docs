@@ -13,3 +13,10 @@ skarf. Project Source: `Github`_
 
    installation
    configure
+
+.. toctree::
+   :caption: Other
+   :maxdepth: 2
+   :hidden:
+
+   static
