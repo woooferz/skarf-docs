@@ -20,3 +20,4 @@ skarf. Project Source: `Github`_
    :hidden:
 
    static
+   file
