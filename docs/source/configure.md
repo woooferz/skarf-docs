@@ -11,7 +11,7 @@ section which tells you what everything means.
 ### Example YAML (`config.yml`)
 
 ``` yaml
-version: 4 # pls no touch this
+version: 5 # pls no touch this
 debug: false
 settings:
   name: "Person" # Main name
@@ -23,6 +23,12 @@ settings:
   link-color: "#F6F6F6" # The color of the text on the links
   glass-card: true # If the image, name, subtitle and links should be displayed on a glass-like card
   custom-css: false # OPTIONAL! url to custom css
+  kofi:
+    status: false # kofi on / off status
+    slug: supportkofi # if your kofi was https://ko-fi.com/supportkofi then you would put 'wooferz'
+    text: Support Ko-Fi # the text on the button (Keep under 13 characters as it will add a scroll bar otherwise)
+    background-color: '#00b9fe' # background color of button
+    text-color: '#ffffff' # text color of button
   font-awesome:
     pro: false # if you have pro set to true
     pro-url: "/idk/here/maybe" # if you have pro enter url here, either a local one such as /static/fontawesome-pro.css or an external one such as https://fontawesome.example.com/pro.css (BOTH OF THESE WON'T WORK, GET YOUR OWN LINK)
@@ -73,7 +79,7 @@ settings:
 
 ``` json
 {
-  "version": 4,
+  "version": 5,
   "debug": false,
   "settings": {
     "name": "Person",
@@ -85,6 +91,13 @@ settings:
     "link-color": "#F6F6F6",
     "glass-card": true,
     "custom-css": false,
+    "kofi": {
+      "status": false,
+      "slug": "supportkofi",
+      "text": "Support Ko-Fi",
+      "background-color": "#00b9fe",
+      "text-color": "#ffffff"
+    },
     "font-awesome": {
       "pro": false,
       "pro-url": "/idk/here/maybe"
@@ -178,6 +191,16 @@ device.
 [css.glass](https://css.glass))
 
 `settings.custom-css` A link to custom css
+
+`settings.kofi.status` true/false if you want to enable Ko-Fi Integration.
+
+`settings.kofi.slug` Your kofi link, but only the last bit (e.g. supportkofi)
+
+`settings.kofi.text` Button text on Ko-Fi Integration.
+
+`settings.kofi.background-color` Background color of Ko-Fi Integration button.
+
+`settings.kofi.text-color` Text color on Ko-Fi Integration button.
 
 `settings.font-awesome.pro` If you want pro url enabled (true/false)
 
