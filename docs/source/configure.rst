@@ -176,11 +176,21 @@ device.
 ``settings.glass-card`` If the card should have a glass effect. (From
 `css.glass`_)
 
-``settings.background.type`` Either color or image. Decides the type of
+``settings.custom-css`` A link to custom css
+
+``settings.font-awesome.pro`` If you want pro url enabled (true/false)
+
+``settings.font-awesome.pro-url`` The link to fontawesome pro you want to use only used if ``settings.font-awesome.pro`` is enabled.
+
+``settings.glass.color`` Optional! If you want a custom color on the glass effect
+
+``settings.background.type`` Either color or image or gradient. Decides the type of
 background your card will have.
 
 ``settings.background.content`` If ``settings.background.type`` is color
-then use a hex color code, if it is image then use a image url.
+then use a hex color code, if it is image then use a image url. If it is gradient then use the first gradient value
+
+``settings.background.content-2`` Only used if ``settings.background.type`` is gradient, sets the second gradient value
 
 ``settings.favicon`` Path to a favicon.
 
@@ -206,5 +216,13 @@ is an icon name. If it is ``image`` then an image url.
 ``settings.links.image`` Same as ``settings.image``.
 
 ``settings.links.color`` The background colour of a link.
+
+``settings.mini-links`` Like ``settings.links`` but it only has a icon and appears in one line, it is an array/list
+
+``settings.mini-links.link`` The link of the item 
+
+``settings.mini-links.image`` Same as ``settings.image``
+
+``settings.mini-links.color`` The color of the link
 
 .. _css.glass: https://css.glass
