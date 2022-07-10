@@ -20,6 +20,7 @@ services:
         volumes:
             - './static:/app/static' # To store data in the [website]/static/ url
             - './config:/app/config' # To store the config.yml config
+            - `./build:/app/build` # If you want to compile the website instead of serving it as a webpage.
         image: 'ghcr.io/woooferz/skarf:master'
 ```
 
@@ -31,7 +32,7 @@ it. Help: [Configure Skarf](./configure.md)
 Run this command:
 
 ``` sh
-docker run --name skarf -p 8080:80 -v /path/to/static:/app/static -v /path/to/config:/app/config ghcr.io/woooferz/skarf:master
+docker run --name skarf -p 8080:80 -v /path/to/static:/app/static -v /path/to/config:/app/config -v /path/to/build:/app/build ghcr.io/woooferz/skarf:master
 ```
 
 To get out you probably need to do `docker stop skarf` from another

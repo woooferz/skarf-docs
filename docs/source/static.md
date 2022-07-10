@@ -1,5 +1,11 @@
 # Make Skarf Static
 
+## Post Cool Update
+
+You can simply change the `static` flag in config.yml/config.json, and it will compile it to /app/build
+
+## Pre Cool Update
+
 Skarf is created with flask an it will take up your server resources as
 it is being rendered on the server side. To fix this you can make it
 static with a workaround kinda thing. Do this after you have finished

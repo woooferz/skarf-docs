@@ -12,6 +12,7 @@ section which tells you what everything means.
 
 ``` yaml
 version: 6 # pls no touch this
+static: false
 debug: false
 settings:
   name: "Person" # Main name
@@ -88,6 +89,7 @@ settings:
 ``` json
 {
   "version": 6,
+  "static": false,
   "debug": false,
   "settings": {
     "name": "Person",
@@ -185,6 +187,8 @@ settings:
 ## What everything means
 
 `version` Version of renderer to load config with.
+
+`static` If it should compile the webpage instead of serving it as a flask app. It gets compiled to `/app/build`.
 
 `debug` If debug mode is on which reloads config on every load and shows
 some version info on page
