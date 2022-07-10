@@ -21,4 +21,5 @@ skarf. Project Source: [Github](https://github.com/woooferz/skarf)
    :hidden:
 
    static.md
+   credits.md
 ```
