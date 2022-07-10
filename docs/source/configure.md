@@ -11,7 +11,7 @@ section which tells you what everything means.
 ### Example YAML (`config.yml`)
 
 ``` yaml
-version: 5 # pls no touch this
+version: 6 # pls no touch this
 debug: false
 settings:
   name: "Person" # Main name
@@ -20,8 +20,16 @@ settings:
   verified: false # adds a cool checkmark
   check-color: '#55FF11' # decides the color of checkmark
   color: "#6F6F6F" # The color of the name and subtitle
+  button-border-radius: '15'
   link-color: "#F6F6F6" # The color of the text on the links
-  glass-card: true # If the image, name, subtitle and links should be displayed on a glass-like card
+  card:
+    border-radius: '15'
+    glass: 
+      status: true
+      color: "#FFFFFFAA"
+    solid:
+      status: false
+      color: "#FFFFFF"
   custom-css: false # OPTIONAL! url to custom css
   kofi:
     status: false # kofi on / off status
@@ -32,8 +40,6 @@ settings:
   font-awesome:
     pro: false # if you have pro set to true
     pro-url: "/idk/here/maybe" # if you have pro enter url here, either a local one such as /static/fontawesome-pro.css or an external one such as https://fontawesome.example.com/pro.css (BOTH OF THESE WON'T WORK, GET YOUR OWN LINK)
-  glass:
-    color: "#FFFFFFAA" # color of the glass effect simply remove this if you enjoy the current color
   background: # The background info
     type: color # image or color or gradient Decides what to put as the background
     content: "#2F2F2F" # url to image or a color code (e.g. /static/bg.png) or the first color of a gradient
@@ -44,6 +50,8 @@ settings:
     type: font-awesome # image or font-awesome decides how to display avatar
     style: solid # for font-awesome. Decides what style to display the icon
     content: user # font-awesome icon name, or url to image
+  share: true
+  share-color: '#3F3F3F'
   links:
     - name: Skarf Docs # Frienly Name of link
       link: https://skarf-docs.readthedocs.io/en/latest/index.html # The link to the link
@@ -51,7 +59,7 @@ settings:
         type: font-awesome
         style: solid
         content: book
-      color: "#3F3F3F" # the background color of the link
+      color: '#3F3F3F' # the background color of the link
     - name: Skarf Github # same as item above
       link: https://github.com/woooferz/skarf
       image:
@@ -79,7 +87,7 @@ settings:
 
 ``` json
 {
-  "version": 5,
+  "version": 6,
   "debug": false,
   "settings": {
     "name": "Person",
@@ -88,8 +96,19 @@ settings:
     "verified": false,
     "check-color": "#55FF11",
     "color": "#6F6F6F",
+    "button-border-radius": "15",
     "link-color": "#F6F6F6",
-    "glass-card": true,
+    "card": {
+      "border-radius": "15",
+      "glass": {
+        "status": true,
+        "color": "#FFFFFFAA"
+      },
+      "solid": {
+        "status": false,
+        "color": "#FFFFFF"
+      }
+    },
     "custom-css": false,
     "kofi": {
       "status": false,
@@ -101,9 +120,6 @@ settings:
     "font-awesome": {
       "pro": false,
       "pro-url": "/idk/here/maybe"
-    },
-    "glass": {
-      "color": "#FFFFFFAA"
     },
     "background": {
       "type": "color",
@@ -117,6 +133,8 @@ settings:
       "style": "solid",
       "content": "user"
     },
+    "share": true,
+    "share-color": "#3F3F3F",
     "links": [
       {
         "name": "Skarf Docs",
@@ -185,10 +203,25 @@ device.
 
 `settings.color` Text color of `settings.name` and `settings.subtitle`.
 
+`settings.button-border-radius` The border radius of all the buttons
+
 `settings.link-color` Text color of all the links.
 
-`settings.glass-card` If the card should have a glass effect. (From
-[css.glass](https://css.glass))
+`settings.card` All the configuration for the card design
+
+`settings.card.border-radius` The border radius of the card
+
+`settings.card.glass.status` If the card should have a glass effect. (From [css.glass](https://css.glass))
+
+`settings.card.glass.color` Color of glass effect if it is enabled
+
+`settings.card.solid.status` If the card should have a solid color background. Only can be enabled if `settings.card.glass.status` is set to false
+
+`settings.card.solid.color` Color of solid background
+
+`settings.share` Status of share button
+
+`settings.share-color` Color of share button if enabled
 
 `settings.custom-css` A link to custom css
 
