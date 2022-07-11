@@ -6,8 +6,8 @@ project = 'Skarf Docs'
 copyright = '2022, Wooferz'
 author = 'Wooferz'
 
-release = '0.1'
-version = '0.1.3'
+release = '0.2.4'
+version = '0.2.4'
 
 # -- General configuration
 
@@ -17,6 +17,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'myst_parser',
 ]
 
 intersphinx_mapping = {
