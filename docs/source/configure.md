@@ -11,9 +11,9 @@ section which tells you what everything means.
 ### Example YAML (`config.yml`)
 
 ``` yaml
-version: 8
-static: false
-debug: false
+version: 9 # Sets the engine version
+static: false # This will compile the page into static html, css, images etc. 
+debug: false # This will auto reload your config but will increase server resources so DO NOT USE THIS IN PRODUCTION
 settings:
   name: "Person" # Main name
   subtitle: "Some for info" # A little text below namwe
@@ -62,6 +62,7 @@ settings:
         type: font-awesome
         style: solid
         content: book
+        mode: next # can be left, right, next decides where the icon is if it is an icon
       color: '#3F3F3F' # the background color of the link
     - name: Skarf Github # same as item above
       link: https://github.com/woooferz/skarf
@@ -90,7 +91,7 @@ settings:
 
 ``` json
 {
-  "version": 8,
+  "version": 9,
   "static": false,
   "debug": false,
   "settings": {
@@ -148,7 +149,8 @@ settings:
         "image": {
           "type": "font-awesome",
           "style": "solid",
-          "content": "book"
+          "content": "book",
+          "mode": "next"
         },
         "color": "#3F3F3F"
       },
@@ -278,6 +280,8 @@ assuming you have the free tier of font awesome
 
 `settings.image.content` If `settings.image.type` is font-awesome it is
 an icon name. If it is `image` then an image url.
+
+`settings.image.mode` Can be 'next', 'left' or 'right' decides where the icon should go if `settings.image.type` is fontawesome.
 
 `settings.links` An array/list of links.
 
