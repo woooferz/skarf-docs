@@ -11,12 +11,13 @@ section which tells you what everything means.
 ### Example YAML (`config.yml`)
 
 ``` yaml
-version: 6 # pls no touch this
+version: 7
 static: false
 debug: false
 settings:
   name: "Person" # Main name
   subtitle: "Some for info" # A little text below namwe
+  credits: false
   font: Roboto, Arial # The font-family to use for the page
   verified: false # adds a cool checkmark
   check-color: '#55FF11' # decides the color of checkmark
@@ -34,7 +35,7 @@ settings:
   custom-css: false # OPTIONAL! url to custom css
   kofi:
     status: false # kofi on / off status
-    slug: supportkofi # if your kofi was https://ko-fi.com/supportkofi then you would put 'wooferz'
+    slug: supportkofi # if your kofi was https://ko-fi.com/supportkofi then you would put 'supportkofi'
     text: Support Ko-Fi # the text on the button (Keep under 13 characters as it will add a scroll bar otherwise)
     background-color: '#00b9fe' # background color of button
     text-color: '#ffffff' # text color of button
@@ -88,12 +89,13 @@ settings:
 
 ``` json
 {
-  "version": 6,
+  "version": 7,
   "static": false,
   "debug": false,
   "settings": {
     "name": "Person",
     "subtitle": "Some for info",
+    "credits": false,
     "font": "Roboto, Arial",
     "verified": false,
     "check-color": "#55FF11",
@@ -198,6 +200,8 @@ some version info on page
 `settings.subtitle` Text beneath `settings.name` with a smaller font
 size.
 
+`settings.credits` Should add `Powered by Skarf` to the bottom of page.
+
 `settings.font` Font of the card, needs to be installed on the viewers
 device.
 
@@ -284,6 +288,8 @@ an icon name. If it is `image` then an image url.
 `settings.links.text-color` Overides `settings.link-color`, it sets the
 color of the link
 
+`settings.links.copy` If enabled it will copy `settings.links.link` to clipboard instead of going to that webpage.
+
 `settings.mini-links` Like `settings.links` but it only has a icon and
 appears in one line, it is an array/list
 
@@ -292,3 +298,5 @@ appears in one line, it is an array/list
 `settings.mini-links.image` Same as `settings.image`
 
 `settings.mini-links.color` The color of the link
+
+`settings.mini-links.copy` If enabled it will copy `settings.mini-links.link` to clipboard instead of going to that webpage.
