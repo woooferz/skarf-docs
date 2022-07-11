@@ -11,7 +11,7 @@ section which tells you what everything means.
 ### Example YAML (`config.yml`)
 
 ``` yaml
-version: 7
+version: 8
 static: false
 debug: false
 settings:
@@ -19,6 +19,7 @@ settings:
   subtitle: "Some for info" # A little text below namwe
   credits: false
   font: Roboto, Arial # The font-family to use for the page
+  footer: Remember to eat your waffles
   verified: false # adds a cool checkmark
   check-color: '#55FF11' # decides the color of checkmark
   color: "#6F6F6F" # The color of the name and subtitle
@@ -89,7 +90,7 @@ settings:
 
 ``` json
 {
-  "version": 7,
+  "version": 8,
   "static": false,
   "debug": false,
   "settings": {
@@ -97,6 +98,7 @@ settings:
     "subtitle": "Some for info",
     "credits": false,
     "font": "Roboto, Arial",
+    "footer": "Remember to eat your waffles",
     "verified": false,
     "check-color": "#55FF11",
     "color": "#6F6F6F",
@@ -204,6 +206,8 @@ size.
 
 `settings.font` Font of the card, needs to be installed on the viewers
 device.
+
+`settings.footer` Footer text set to 'false' to disable.
 
 `settings.verified` Verification status, if set to true it adds a cool little checkmark
 
