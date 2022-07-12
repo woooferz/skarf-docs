@@ -20,7 +20,7 @@ services:
         volumes:
             - './static:/app/static' # To store data in the [website]/static/ url
             - './config:/app/config' # To store the config.yml config
-            - `./build:/app/build` # If you want to compile the website instead of serving it as a webpage.
+            - './build:/app/build' # If you want to compile the website instead of serving it as a webpage.
         image: 'ghcr.io/woooferz/skarf:master'
 ```
 
