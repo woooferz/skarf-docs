@@ -11,7 +11,7 @@ section which tells you what everything means.
 ### Example YAML (`config.yml`)
 
 ``` yaml
-version: 9 # Sets the engine version
+version: 10 # Sets the engine version.
 static: false # This will compile the page into static html, css, images etc. 
 debug: false # This will auto reload your config but will increase server resources so DO NOT USE THIS IN PRODUCTION
 settings:
@@ -19,6 +19,7 @@ settings:
   subtitle: "Some for info" # A little text below namwe
   credits: false
   font: Roboto, Arial # The font-family to use for the page
+  font_style_url: https://fonts.googleapis.com/css2?family=Roboto&display=swap
   footer: Remember to eat your waffles
   verified: false # adds a cool checkmark
   check-color: '#55FF11' # decides the color of checkmark
@@ -64,6 +65,8 @@ settings:
         content: book
         mode: next # can be left, right, next decides where the icon is if it is an icon
       color: '#3F3F3F' # the background color of the link
+      color-2: '#8F8F8F' # if this exists then it will try to color it gradient
+      color-deg: '45' # this chooses the degree or angle that the gradient will go
     - name: Skarf Github # same as item above
       link: https://github.com/woooferz/skarf
       image:
@@ -91,7 +94,7 @@ settings:
 
 ``` json
 {
-  "version": 9,
+  "version": 10,
   "static": false,
   "debug": false,
   "settings": {
@@ -99,6 +102,7 @@ settings:
     "subtitle": "Some for info",
     "credits": false,
     "font": "Roboto, Arial",
+    "font_style_url": "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
     "footer": "Remember to eat your waffles",
     "verified": false,
     "check-color": "#55FF11",
@@ -152,7 +156,9 @@ settings:
           "content": "book",
           "mode": "next"
         },
-        "color": "#3F3F3F"
+        "color": "#3F3F3F",
+        "color-2": "#8F8F8F",
+        "color-deg": "45"
       },
       {
         "name": "Skarf Github",
@@ -208,6 +214,8 @@ size.
 
 `settings.font` Font of the card, needs to be installed on the viewers
 device.
+
+`settings.font_style_url` A @import css url for a font.
 
 `settings.footer` Footer text set to 'false' to disable.
 
@@ -292,6 +300,10 @@ an icon name. If it is `image` then an image url.
 `settings.links.image` Same as `settings.image`.
 
 `settings.links.color` The background color of a link.
+
+`settings.links.color-2` The second color, if this exists it will try to make the button background a gradient.
+
+`settings.links.color-deg` The degree of the gradient, only use if you want a gradient.
 
 `settings.links.text-color` Overides `settings.link-color`, it sets the
 color of the link
