@@ -6,8 +6,8 @@ project = 'Skarf Docs'
 copyright = '2022, Wooferz'
 author = 'Wooferz'
 
-release = '0.2.5'
-version = '0.2.5'
+release = '0.2.6'
+version = '0.2.6'
 
 # -- General configuration
 
